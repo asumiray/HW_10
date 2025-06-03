@@ -1,0 +1,30 @@
+doskey /history
+cd Desktop
+cd Repo
+ls
+gh repo clone asumiray/HW_10
+gh auth login
+gh repo clone asumiray/HW_10
+cd HW_10
+type nul > text_ignore.txt
+git status
+git add .
+git commit
+type nul > main_test.txt
+git add .
+git commit
+git checkout -b develop
+type nul > develop_test.txt
+git add .
+git commit
+cat develop_test.txt
+echo aaaa > develop_test.txt
+git status
+git add .
+git commit
+git checkout main
+git merge develop
+git log
+git commit
+git push
+doskey /history > command_list.csv
